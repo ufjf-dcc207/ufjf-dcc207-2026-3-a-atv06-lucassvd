@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Emoji.css";
 
 const EMOJIS = new Map<string, string>([
@@ -7,16 +8,16 @@ const EMOJIS = new Map<string, string>([
 ]);
 
 export default function Emoji() {
-    let situacao = "happy";
+    const [situacao, setSituacao] = useState("happy");
 
     function toHappy() {
         console.log("toHappy()!");
-        situacao = "happy";
+        setSituacao("happy");
     }
 
     function toDead() {
         console.log("toDead()!");
-        situacao = "dead";
+        setSituacao("dead");
     }
     return (
         <div className="emoji">
