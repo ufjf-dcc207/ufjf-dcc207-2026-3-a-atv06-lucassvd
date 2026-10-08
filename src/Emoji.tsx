@@ -11,10 +11,12 @@ export default function Emoji() {
 
     function toHappy() {
         console.log("toHappy()!");
+        situacao = "happy";
     }
 
     function toDead() {
         console.log("toDead()!");
+        situacao = "dead";
     }
     return (
         <div className="emoji">
