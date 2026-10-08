@@ -8,10 +8,21 @@
 .acoes { 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
 }
 
 .acoes button {
     width: 60px;
+}
+
+.atributos {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 60px;
 }
