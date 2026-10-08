@@ -15,6 +15,11 @@ export default function Emoji() {
         setSituacao("happy");
     }
 
+    function toSick() {
+        console.log("toSick()!");
+        setSituacao("sick");
+    }
+
     function toDead() {
         console.log("toDead()!");
         setSituacao("dead");
@@ -24,6 +29,7 @@ export default function Emoji() {
             <div className="situacao">{EMOJIS.get(situacao) || "☠"}</div>
             <div className="acoes">
                 <button onClick={toDead}>Morto</button>
+                <button onClick={toSick}>Doente</button>
                 <button onClick={toHappy}>Vivo</button>
             </div>
         </div>
