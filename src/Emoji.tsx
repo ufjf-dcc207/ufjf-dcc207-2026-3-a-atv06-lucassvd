@@ -24,13 +24,32 @@ export default function Emoji() {
         console.log("toDead()!");
         setSituacao("dead");
     }
+
+    function toNext() {
+        switch (situacao) {
+            case "happy":
+                setSituacao("sick");
+                break;
+            case "sick":
+                setSituacao("dead");
+                break;
+            case "dead":
+                setSituacao("happy");
+                break;
+            default:
+                setSituacao("happy");
+                break;
+        }
+    }
+
     return (
         <div className="emoji">
-            <div className="situacao">{EMOJIS.get(situacao) || "☠"}</div>
+            <div className="situacao">{EMOJIS.get(situacao) || "😐"}</div>
             <div className="acoes">
                 <button onClick={toDead}>Morto</button>
                 <button onClick={toSick}>Doente</button>
                 <button onClick={toHappy}>Vivo</button>
+                <button onClick={toNext}>Ciclo</button>
             </div>
         </div>
     );
